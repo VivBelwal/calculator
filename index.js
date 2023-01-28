@@ -8,6 +8,8 @@ const app = express();
 
 const SignupRoute = require("./src/routes/signup.route");
 const LoginRoute = require("./src/routes/login.route");
+const ProfileRoute = require("./src/routes/profile.route");
+const BmiRoute = require("./src/routes/bmi.route");
 
 app.use(express.json());
 app.use(cors());
@@ -16,6 +18,8 @@ const connect = require("./src/config/db");
 
 app.use("/signup", SignupRoute);
 app.use("/login", LoginRoute);
+app.use("/profile", ProfileRoute);
+app.use("/bmi", BmiRoute);
 
 app.listen(PORT, async () => {
   try {
