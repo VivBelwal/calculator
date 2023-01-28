@@ -10,6 +10,7 @@ const SignupRoute = require("./src/routes/signup.route");
 const LoginRoute = require("./src/routes/login.route");
 const ProfileRoute = require("./src/routes/profile.route");
 const BmiRoute = require("./src/routes/bmi.route");
+const hisRoute = require("./src/routes/history.route");
 
 app.use(express.json());
 app.use(cors());
@@ -20,6 +21,7 @@ app.use("/signup", SignupRoute);
 app.use("/login", LoginRoute);
 app.use("/profile", ProfileRoute);
 app.use("/bmi", BmiRoute);
+app.use("/history", hisRoute);
 
 app.listen(PORT, async () => {
   try {
