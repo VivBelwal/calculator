@@ -9,7 +9,7 @@ SignupRoute.post("/", async (req,res) =>{
     const user = await Auth.findOne({email})
 
     if(user){
-        return  res.json({
+        return  res.send({
             status : "failed",
             message : "User already exists !!"
         })
@@ -19,7 +19,7 @@ SignupRoute.post("/", async (req,res) =>{
         name , email, password
     })
 
-    return res.status(200).json({status : "ok", message : "New User Signedup !!"})
+    return res.status(200).send({status : "ok", message : "New User Signedup !!"})
 })
 
 module.exports = SignupRoute;

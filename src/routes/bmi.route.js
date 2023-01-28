@@ -36,7 +36,7 @@ BmiRoute.post("/", async(req,res) =>{
             email, history : [{tag, BMI}]
         })
     
-        return res.status(200).json({status : "ok", message : [{tag,BMI}]})
+        return res.status(200).send({status : "ok", message : [{tag,BMI}]})
        
     } 
  let a = {tag,BMI};
