@@ -11,7 +11,7 @@ const LoginRoute = require("./src/routes/login.route");
 const ProfileRoute = require("./src/routes/profile.route");
 const BmiRoute = require("./src/routes/bmi.route");
 const hisRoute = require("./src/routes/history.route");
-
+const LogoutRoute = require("./src/routes/logout.route");
 app.use(express.json());
 app.use(cors());
 
@@ -22,6 +22,7 @@ app.use("/login", LoginRoute);
 app.use("/profile", ProfileRoute);
 app.use("/bmi", BmiRoute);
 app.use("/history", hisRoute);
+app.use("/logout", LogoutRoute);
 
 app.listen(PORT, async () => {
   try {
